@@ -294,8 +294,8 @@ class PrintJobHistoryPlugin(
 					filemanentModel.usedCost = spoolCost / spoolWeight * usedWeight
 		elif self._spoolManagerPluginImplementation != None and self._spoolManagerPluginImplementationState == "enabled":
 
-			filemanentModel.usedLength = self._spoolManagerPluginImplementation.filamentOdometer.totalExtrusion[0]
-			selectedSpool = self._spoolManagerPluginImplementation.filamentManager.loadSelectedSpool()
+			filemanentModel.usedLength = self._spoolManagerPluginImplementation.myFilamentOdometer.totalExtrusion[0]
+			selectedSpool = self._spoolManagerPluginImplementation.myFilamentOdometer.loadSelectedSpool()
 			toolId = 0 #TODO multi extruder support in SpoolManager
 			if selectedSpool != None:
 				spoolData = selectedSpool
